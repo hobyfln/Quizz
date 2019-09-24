@@ -8,6 +8,8 @@ namespace Quizz
 {
     public class Candidate
     {
+        //Fields not required with Db
+
         #region Fields
         private int _candidateId;
         private string _name;
