@@ -41,8 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Admin.cs" />
+    <Compile Include="Entities\Answer.cs" />
     <Compile Include="Entities\Candidate.cs" />
     <Compile Include="Entities\Question.cs" />
+    <Compile Include="Entities\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\Quizz.cs" />
   </ItemGroup>
