@@ -19,7 +19,7 @@ namespace Quizz.Entities
         #region Getters/Setters
 
         public int IdAnswer { get => _idAnswer; set => IdAnswer = value; }
-        public string IdQUestion { get => _idQuestion; set => IdQUestion= value ; }
+        public string IdQuestion { get => _idQuestion; set => IdQuestion= value ; }
         public string Type { get => _idQuestion; set => Type= value ; }
 
         #endregion;
