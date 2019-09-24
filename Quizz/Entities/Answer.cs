@@ -8,19 +8,16 @@ namespace Quizz.Entities
 {
     public partial class Answer
     {
-        #region Fields
-            //[ForeignKey(Answer)]
-            private int _idAnswer;
-            private string _idQuestion;
-            private string _type;
 
-        #endregion
 
-        #region Getters/Setters
+        #region Get/Set
+        //[ForeignKey("QuestionAnswer")]
+        public int idQuestion { get; set; }
+        public int IdAnswer { get; set; }
+        public string IdQuestion { get; set; }
+        public string Type { get; set; }
 
-        public int IdAnswer { get => _idAnswer; set => IdAnswer = value; }
-        public string IdQuestion { get => _idQuestion; set => IdQuestion= value ; }
-        public string Type { get => _idQuestion; set => Type= value ; }
+        //public virtual Questions QuestionAnswer { get; set; }
 
         #endregion;
     }
