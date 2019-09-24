@@ -8,23 +8,21 @@ using System.Threading.Tasks;
 
 namespace Quizz
 {
-    public class Quizz
+    public partial class Quizz
     {
-        #region Getters/Setters
         [Key]
-        public int IdQuizz { get; set; }
-        [ForeignKey("QuizzQuestions")]
-        public int IdQuestions { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int QuizzId { get; set; }
+        //[ForeignKey("QuizzQuestions")]
+        public int QuestionsId { get; set; }
         [ForeignKey("QuizzCandidate")]
-        public int IdCandidate { get; set; }
-        [ForeignKey("QuizzCreator")]
-        public string IdCreator { get; set; }
+        public int CandidateId { get; set; }
+        //[ForeignKey("QuizzCreator")]
+        public string CreatorId { get; set; }
         public string Creator { get; set; }
 
         //public virtual Questions QuizzQuestions { get; set; }
-        //public virtual User QuizzUser { get; set; }
+        //public virtual User QuizzCreator { get; set; }
         public virtual Candidate QuizzCandidate { get; set; }
-
-    #endregion
-}
+    }
 }

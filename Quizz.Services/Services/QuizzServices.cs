@@ -41,9 +41,9 @@ namespace Quizz.Services.Services
         {
             foreach (Quizz quizz in ListQuizz)
             {
-                Console.WriteLine("Candidate ID: " + quizz.IdCandidate);
-                Console.WriteLine("Questions ID: " + quizz.IdQuestions);
-                Console.WriteLine("Quizz ID: " + quizz.IdQuizz);
+                Console.WriteLine("Candidate ID: " + quizz.CandidateId);
+                Console.WriteLine("Questions ID: " + quizz.QuestionsId);
+                Console.WriteLine("Quizz ID: " + quizz.QuizzId);
                 Console.WriteLine("**********");
             }
         }

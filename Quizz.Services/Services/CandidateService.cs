@@ -1,4 +1,5 @@
-﻿using Quizz.Services.Interfaces;
+﻿using Quizz.Entities;
+using Quizz.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,13 @@ namespace Quizz
 {
     public class CandidateService : ICandidateService
     {
-
+        public void AddCandidate()
+        {
+            using (var ctx = new QuizzContext())
+            {
+                var candidate = new Candidate() { Name = "", Age = 20, Mail = "", SkillLevel=2, Techno="" };
+            }
+        }
 
         public void DeleteCandidate()
         {
