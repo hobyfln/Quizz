@@ -9,8 +9,16 @@ namespace Quizz.Entities
 {
     public partial class QuizzContext : DbContext
     {
-        public QuizzContext
-    }
-    {
+        public QuizzContext() : base()
+        {
+            
+        }
+
+        public DbSet<Candidate> Candidates { get; set; }
+        public DbSet<Quizz> Quizzs { get; set; }
+        //public DbSet<Question> Questions { get; set; }
+
+
+
     }
 }

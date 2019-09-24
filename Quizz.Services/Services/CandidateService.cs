@@ -29,7 +29,7 @@ namespace Quizz
                 Console.WriteLine("Name: " + candidate.Name);
                 Console.WriteLine("Age: " + candidate.Age);
                 Console.WriteLine("Techno: " + candidate.Techno);
-                Console.WriteLine("Level: " + candidate.Level);
+                Console.WriteLine("Level: " + candidate.SkillLevel);
                 Console.WriteLine("**********");
             }
         }

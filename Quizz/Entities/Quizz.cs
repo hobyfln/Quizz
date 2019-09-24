@@ -10,18 +10,21 @@ namespace Quizz
 {
     public class Quizz
     {
-
         #region Getters/Setters
         [Key]
         public int IdQuizz { get; set; }
-        [ForeignKey("Questions")]
+        [ForeignKey("QuizzQuestions")]
         public int IdQuestions { get; set; }
-        [ForeignKey("Candidate")]
+        [ForeignKey("QuizzCandidate")]
         public int IdCandidate { get; set; }
-        [ForeignKey("User")]
+        [ForeignKey("QuizzCreator")]
         public string IdCreator { get; set; }
         public string Creator { get; set; }
 
-        #endregion
-    }
+        //public virtual Questions QuizzQuestions { get; set; }
+        //public virtual User QuizzUser { get; set; }
+        public virtual Candidate QuizzCandidate { get; set; }
+
+    #endregion
+}
 }
