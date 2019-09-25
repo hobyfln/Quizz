@@ -8,15 +8,13 @@ using System.Threading.Tasks;
 
 namespace Quizz.Entities
 {
-    public partial class Questions
+    public partial class Question : BaseTable
     {
-        #region Getters/Setters
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int IdQuestion { get; set; }
-        public string Question { get; set; }
+        public int QuestionId { get; set; }
+        public string QuestionStr { get; set; }
         public string Type { get; set; }
         //public List Answers<Answer> QuestionAnswers{ get; set; }
-        #endregion
     }
 }

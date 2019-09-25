@@ -50,12 +50,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\BaseTable.cs" />
     <Compile Include="Entities\Candidate.cs" />
     <Compile Include="Entities\Question.cs" />
     <Compile Include="Entities\QuizzContext.cs" />
+    <Compile Include="Entities\QuizzLinkQuestions.cs" />
     <Compile Include="Migrations\201909241451265_InitialDb.cs" />
     <Compile Include="Migrations\201909241451265_InitialDb.Designer.cs">
       <DependentUpon>201909241451265_InitialDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909250849011_BaseTable.cs" />
+    <Compile Include="Migrations\201909250849011_BaseTable.Designer.cs">
+      <DependentUpon>201909250849011_BaseTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909250859238_QuestionEntityAdd.cs" />
+    <Compile Include="Migrations\201909250859238_QuestionEntityAdd.Designer.cs">
+      <DependentUpon>201909250859238_QuestionEntityAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -68,6 +78,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201909241451265_InitialDb.resx">
       <DependentUpon>201909241451265_InitialDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909250849011_BaseTable.resx">
+      <DependentUpon>201909250849011_BaseTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909250859238_QuestionEntityAdd.resx">
+      <DependentUpon>201909250859238_QuestionEntityAdd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

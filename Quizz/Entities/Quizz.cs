@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Quizz.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -8,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace Quizz
 {
-    public partial class Quizz
+    public partial class Quizz : BaseTable
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int QuizzId { get; set; }
-        //[ForeignKey("QuizzQuestions")]
+        [ForeignKey("QuizzQuestions")]
         public int QuestionsId { get; set; }
         [ForeignKey("QuizzCandidate")]
         public int CandidateId { get; set; }
