@@ -20,6 +20,11 @@ namespace TestQuizConsole
             ListCandidates.Add(newCandidate);
             ServiceProvider.GetCandidates(ListCandidates);
             Console.ReadKey();
+
+
         }
+
+
+
     }
 }
