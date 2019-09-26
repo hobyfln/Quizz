@@ -16,7 +16,7 @@ namespace TestQuizConsole
             CandidateService ServiceProvider = new CandidateService();
             List<object> ListCandidates = new List<object>();
 
-            Candidate newCandidate = new Candidate(20, "Joe Doe", 24, "C#", 2);
+            Candidate newCandidate = new Candidate();
             ListCandidates.Add(newCandidate);
             ServiceProvider.GetCandidates(ListCandidates);
             Console.ReadKey();

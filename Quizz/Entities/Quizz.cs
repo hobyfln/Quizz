@@ -10,11 +10,11 @@ namespace Quizz
     {
         #region Fields
 
-        private int IdQuizz { get; set}
-        private int IdQuestions { get; set}
-        private int IdCandidate { get; set}
-        private string Creator { get; set}
-        private string Url { get; set}
+        private int IdQuizz { get; set; }
+        private int IdQuestions { get; set; }
+        private int IdCandidate { get; set; }
+        private string Creator { get; set; }
+        private string Url { get; set; }
 
         #endregion
     }
