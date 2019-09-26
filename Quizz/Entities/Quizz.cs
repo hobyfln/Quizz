@@ -10,30 +10,12 @@ namespace Quizz
     {
         #region Fields
 
-        private int _idQuizz;
-        private int _idQuestions;
-        private int _idCandidate;
-        private string _creator;
-        private string _url;
+        private int IdQuizz { get; set}
+        private int IdQuestions { get; set}
+        private int IdCandidate { get; set}
+        private string Creator { get; set}
+        private string Url { get; set}
 
-        #endregion
-
-        #region Constructor
-        public Quizz(int idQuizz, int idQuestions, int idCandidate, string creator, string url)
-        {
-            _idQuizz = idQuizz;
-            _idQuestions = idQuestions;
-            _idCandidate = idCandidate;
-            _creator = creator;
-            _url = url;
-        }
-        #endregion
-
-        #region Getters/Setters
-        public int IdQuizz { get => _idQuizz; set => _idQuizz = value; }
-        public int IdQuestions { get => _idQuestions; set => _idQuestions = value; }
-        public int IdCandidate { get => _idCandidate; set => _idCandidate = value; }
-        public string Creator { get => _creator; set => _creator = value; }
         #endregion
     }
 }

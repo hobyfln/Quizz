@@ -8,14 +8,6 @@ namespace Quizz.Entities
 {
     class Questions
     {
-        #region Fields
-
-        private int _idQuestion;
-        private string _question;
-        private string _type;
-
-        #endregion
-
 
         #region Getters/Setters
         //[Key]

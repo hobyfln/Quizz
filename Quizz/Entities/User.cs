@@ -9,9 +9,9 @@ namespace Quizz.Entities
     public partial class User
     {
 
-        public int userId { get; set; }
-        public int idQuizz { get; set; }
-        public bool isAdmin { get; set; }
+        public int UserId { get; set; }
+        public int IdQuizz { get; set; }
+        public bool IsAdmin { get; set; }
 
     }
 }
