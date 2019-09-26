@@ -17,6 +17,7 @@ namespace Quizz.Entities
         [ForeignKey("CandidatQuizz")]
         public int QuizzId { get; set; }
         public string NameTechnologie { get; set; }
+
         public virtual Quizz CandidatQuizz { get; set; }
         #endregion;
     }
