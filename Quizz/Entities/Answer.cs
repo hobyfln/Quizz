@@ -8,8 +8,6 @@ namespace Quizz.Entities
 {
     public partial class Answer
     {
-
-
         #region Get/Set
         //[ForeignKey("QuestionAnswer")]
         public int idQuestion { get; set; }
