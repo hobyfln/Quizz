@@ -14,7 +14,7 @@ namespace TestQuizConsole
         static void Main(string[] args)
         {
             CandidateService ServiceProvider = new CandidateService();
-            List<object> ListCandidates = new List<object>();
+            List<Candidate> ListCandidates = new List<Candidate>();
 
             Candidate newCandidate = new Candidate();
             ListCandidates.Add(newCandidate);
