@@ -17,7 +17,12 @@ namespace Quizz.Entities
         public DbSet<Candidate> Candidates { get; set; }
         public DbSet<Quizz> Quizzs { get; set; }
         public DbSet<Question> Questions { get; set; }
+
         public DbSet<QuizzLinkQuestions> QuizzLinkQuestions { get; set; }
+
+        public DbSet<Technologie> Technologies { get; set; }
+        public DbSet<SkillLevel> SkillLevels { get; set; }
+
         //public DbSet<SkillLevel> SkillLevels { get; set; }
 
 
