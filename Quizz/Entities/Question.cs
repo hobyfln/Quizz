@@ -19,7 +19,10 @@ namespace Quizz.Entities
         public int QuestionsQuizz { get; set; }
         public string QuestionStr { get; set; }
         public string Type { get; set; }
+        [ForeignKey("QuizzQuestions")]
+        public int QuestionSkill { get; set; }
 
+        public virtual Question QuizzQuestions { get; set; }
         public virtual QuizzLinkQuestions QuizzId { get; set; }
         //public List Answers<Answer> QuestionAnswers{ get; set; }
     }
