@@ -16,11 +16,10 @@ namespace Quizz.Entities
         public int SkillLevelId { get; set; }
         [ForeignKey("CandidatQuizz")]
         public int QuizzId { get; set; }
-        [ForeignKey("QuizzQuestions")]
         public int QuestionId { get; set; }
         public string NameSkillLevel { get; set; }
+
         public virtual Quizz CandidatQuizz { get; set; }
-        public virtual Question QuizzQuestions { get; set; }
 
         #endregion
 
