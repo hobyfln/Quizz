@@ -9,6 +9,7 @@ namespace Quizz.Services.Interfaces
 {
     public interface ICandidateService
     {
+        void AddCandidate();
         void DeleteCandidate();
         void EditCandidate();
         void GetCandidates(List<Candidate> ListCandidates);

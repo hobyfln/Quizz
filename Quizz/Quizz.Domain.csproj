@@ -51,15 +51,60 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Admin.cs" />
+    <Compile Include="Entities\Answer.cs" />
+    <Compile Include="Entities\BaseTable.cs" />
     <Compile Include="Entities\Candidate.cs" />
     <Compile Include="Entities\Question.cs" />
     <Compile Include="Entities\QuizzContext.cs" />
+    <Compile Include="Entities\QuizzLinkQuestions.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Migrations\201909251130597_Init.cs" />
+    <Compile Include="Migrations\201909251130597_Init.Designer.cs">
+      <DependentUpon>201909251130597_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909251132555_LinkQuizz.cs" />
+    <Compile Include="Migrations\201909251132555_LinkQuizz.Designer.cs">
+      <DependentUpon>201909251132555_LinkQuizz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909251210467_LinkQuizz2.cs" />
+    <Compile Include="Migrations\201909251210467_LinkQuizz2.Designer.cs">
+      <DependentUpon>201909251210467_LinkQuizz2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909251214551_LinkQuizz3.cs" />
+    <Compile Include="Migrations\201909251214551_LinkQuizz3.Designer.cs">
+      <DependentUpon>201909251214551_LinkQuizz3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909251236413_LinkQuizz4.cs" />
+    <Compile Include="Migrations\201909251236413_LinkQuizz4.Designer.cs">
+      <DependentUpon>201909251236413_LinkQuizz4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Entities\SkillLevel.cs" />
+    <Compile Include="Entities\Technologie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\Quizz.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201909251130597_Init.resx">
+      <DependentUpon>201909251130597_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909251132555_LinkQuizz.resx">
+      <DependentUpon>201909251132555_LinkQuizz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909251210467_LinkQuizz2.resx">
+      <DependentUpon>201909251210467_LinkQuizz2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909251214551_LinkQuizz3.resx">
+      <DependentUpon>201909251214551_LinkQuizz3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909251236413_LinkQuizz4.resx">
+      <DependentUpon>201909251236413_LinkQuizz4.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -1,20 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Quizz.Entities
 {
-    class Questions
+    public partial class Question : BaseTable
     {
-        #region Getters/Setters
-        [Key]
-        public int IdQuestion { get; set; }
-        public string Question { get; set; }
+        [Key, Column(Order = 0)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [ForeignKey("QuizzId")]
+        public int QuestionId { get; set; }
+        [Key, Column(Order = 1)]
+        [ForeignKey("QuizzId")]
+        public int QuestionsQuizz { get; set; }
+        public string QuestionStr { get; set; }
         public string Type { get; set; }
+
+        public virtual QuizzLinkQuestions QuizzId { get; set; }
         //public List Answers<Answer> QuestionAnswers{ get; set; }
-        #endregion
     }
 }
