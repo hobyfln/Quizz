@@ -42,7 +42,7 @@ namespace Quizz.Services.Services
             foreach (Quizz quizz in ListQuizz)
             {
                 Console.WriteLine("Candidate ID: " + quizz.CandidateId);
-                Console.WriteLine("Questions ID: " + quizz.QuestionsId);
+                Console.WriteLine("Questions ID: " + quizz.QuestionId);
                 Console.WriteLine("Quizz ID: " + quizz.QuizzId);
                 Console.WriteLine("**********");
             }
