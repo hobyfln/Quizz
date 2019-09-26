@@ -12,7 +12,5 @@ namespace Quizz.Entities
         public int UserId { get; set; }
         public int IdQuizz { get; set; }
         public bool IsAdmin { get; set; }
-
-
     }
 }

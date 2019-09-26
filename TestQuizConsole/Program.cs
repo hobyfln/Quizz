@@ -21,10 +21,7 @@ namespace TestQuizConsole
             ServiceProvider.GetCandidates(ListCandidates);
             Console.ReadKey();
 
-
         }
-
-
 
     }
 }
