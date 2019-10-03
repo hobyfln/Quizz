@@ -9,7 +9,8 @@ namespace Quizz.Entities
 {
     public partial class QuizzContext : DbContext
     {
-        public QuizzContext() : base()
+
+        public QuizzContext() : base("name=DbQuizz")
         {
             
         }

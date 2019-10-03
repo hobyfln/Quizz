@@ -8,7 +8,7 @@ namespace Quizz.Entities
 {
     public partial class User
     {
-
+       
         public int UserId { get; set; }
         public int IdQuizz { get; set; }
         public bool IsAdmin { get; set; }
