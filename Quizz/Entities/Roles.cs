@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Quizz.Entities
 {
-    class Roles
+    public class Roles
     {
         public int IdRole;
         public string Admin;

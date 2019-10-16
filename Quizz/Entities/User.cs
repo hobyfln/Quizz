@@ -17,9 +17,8 @@ namespace Quizz.Entities
         private string Email { get; set; }
         private string Passwd { get; set; }
         public bool IsAdmin { get; set; }
-
-        #region methode
-        
+        #region
+              
         #endregion
     }
 }
