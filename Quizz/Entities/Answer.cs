@@ -16,7 +16,7 @@ namespace Quizz.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int QuestionId { get; set; }
         public int AnswerId { get; set; }
-        [ForeignKey("Answer")]
+        [ForeignKey("AnswerQuizz")]
         public bool RightAnswer { get; set; }
         public string AboutAnswer { get; set; }
 
