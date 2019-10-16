@@ -62,12 +62,23 @@
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\SkillLevel.cs" />
     <Compile Include="Entities\Technologie.cs" />
+    <Compile Include="Migrations\201910160942581_QuestionLinkFix4.cs" />
+    <Compile Include="Migrations\201910160942581_QuestionLinkFix4.Designer.cs">
+      <DependentUpon>201910160942581_QuestionLinkFix4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\Quizz.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201910160942581_QuestionLinkFix4.resx">
+      <DependentUpon>201910160942581_QuestionLinkFix4.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
