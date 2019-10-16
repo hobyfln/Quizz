@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Quizz.Entities
 {
-    class Admin : User
+    class Roles
     {
-        #region fields
-        public int IdAdmin { get; set; }
-        #endregion
+        public int IdRole;
+        public string Admin;
+        public string UserNormal;
     }
 }
