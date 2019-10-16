@@ -15,7 +15,8 @@ namespace TestQuizConsole
         static void Main(string[] args)
         {
             var ServiceProvider = new CandidateService();
-            ServiceProvider.AddCandidate();
+            //ServiceProvider.AddCandidate();
+            ServiceProvider.DeleteCandidate(1);
         }
 
 

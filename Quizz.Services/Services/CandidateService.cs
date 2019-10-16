@@ -44,8 +44,8 @@ namespace Quizz.Services.Services
         {
             using (var ctx = new QuizzContext())
             {
-                var query = ctx.Candidates
-                                .Where(c => c.CandidateId == id);
+                ctx.Candidates.Remove(ctx.Candidates.Single(c => c.CandidateId == id));
+                ctx.SaveChanges();
             }
         }
 
