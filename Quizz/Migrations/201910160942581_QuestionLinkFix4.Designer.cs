@@ -7,13 +7,13 @@ namespace Quizz.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class SkillLevelLink : IMigrationMetadata
+    public sealed partial class QuestionLinkFix4 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(SkillLevelLink));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(QuestionLinkFix4));
         
         string IMigrationMetadata.Id
         {
-            get { return "201910160814453_SkillLevelLink"; }
+            get { return "201910160942581_QuestionLinkFix4"; }
         }
         
         string IMigrationMetadata.Source

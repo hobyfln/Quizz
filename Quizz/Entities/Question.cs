@@ -12,7 +12,6 @@ namespace Quizz.Entities
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [ForeignKey("QuizzId")]
         public int QuestionId { get; set; }
         public string QuestionStr { get; set; }
         public string Type { get; set; }
@@ -21,7 +20,6 @@ namespace Quizz.Entities
         [ForeignKey("QuestionTechnoId")]
         public int QuestionTechno { get; set; }
 
-        public virtual QuizzLinkQuestions QuizzId { get; set; }
         public virtual SkillLevel QuestionSkillId { get; set; }
         public virtual Technologie QuestionTechnoId { get; set; }
 

@@ -12,11 +12,17 @@ namespace Quizz.Entities
     {
         public QuizzContext() : base()
         {
-            //modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
-            //modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
-            //modelBuilder.Conventions.Remove<OneToOneConstraintIntroductionConvention>();
-            //modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+
         }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+            modelBuilder.Conventions.Remove<OneToOneConstraintIntroductionConvention>();
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+        }
+
 
         public DbSet<Candidate> Candidates { get; set; }
         public DbSet<Quizz> Quizzs { get; set; }
@@ -26,9 +32,6 @@ namespace Quizz.Entities
 
         public DbSet<Technologie> Technologies { get; set; }
         public DbSet<SkillLevel> SkillLevels { get; set; }
-
-        //public DbSet<SkillLevel> SkillLevels { get; set; }
-
 
 
     }
