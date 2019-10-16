@@ -10,6 +10,8 @@ namespace Quizz.Entities
 {
     public partial class User
     {
+
+        #region fields
         [Key]
         public int UserId { get; set; }
         public int QuizzId { get; set; }
@@ -17,8 +19,13 @@ namespace Quizz.Entities
         private string Email { get; set; }
         private string Passwd { get; set; }
         public bool IsAdmin { get; set; }
-        #region
-              
+
+        public virtual ICollection<Quizz> Quizzs { get; set; }
+        #endregion
+
+        #region login
+        //Login
+
         #endregion
     }
 }

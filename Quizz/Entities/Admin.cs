@@ -12,6 +12,10 @@ namespace Quizz.Entities
         public int AdminId { get; set; }
         public string NameAdmin { get; set; }
         #endregion
+
+        #region method
+
+        #endregion
     }
 
 }

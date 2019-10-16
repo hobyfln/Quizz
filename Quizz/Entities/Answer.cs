@@ -17,8 +17,9 @@ namespace Quizz.Entities
         public int QuestionId { get; set; }
         public int AnswerId { get; set; }
         [ForeignKey("AnswerQuizz")]
-        public bool RightAnswer { get; set; }
-        public string AboutAnswer { get; set; }
+        public bool AnswerRight { get; set; }
+        public string AnswerAbout { get; set; }
+        public string AnswerShort { get; set; }
 
 
         //public virtual Questions QuestionAnswer { get; set; }
