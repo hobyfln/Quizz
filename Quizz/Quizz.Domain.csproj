@@ -58,6 +58,7 @@
     <Compile Include="Entities\Question.cs" />
     <Compile Include="Entities\QuizzContext.cs" />
     <Compile Include="Entities\QuizzLinkQuestions.cs" />
+    <Compile Include="Entities\Roles.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\SkillLevel.cs" />
     <Compile Include="Entities\Technologie.cs" />
@@ -73,6 +74,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201910160942581_QuestionLinkFix4.resx">
       <DependentUpon>201910160942581_QuestionLinkFix4.cs</DependentUpon>

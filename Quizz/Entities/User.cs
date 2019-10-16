@@ -11,8 +11,12 @@ namespace Quizz.Entities
 
         public int UserId { get; set; }
         public int IdQuizz { get; set; }
+        private string Email { get; set; }
+        private string Passwd { get; set; }
         public bool IsAdmin { get; set; }
 
-
+        #region methode
+        
+        #endregion
     }
 }

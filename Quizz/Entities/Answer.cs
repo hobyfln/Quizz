@@ -13,7 +13,9 @@ namespace Quizz.Entities
         public int idQuestion { get; set; }
         public int IdAnswer { get; set; }
         public string IdQuestion { get; set; }
-        public string Type { get; set; }
+        public bool RightAnswer { get; set; }
+        public string AboutAnswer { get; set; }
+
 
         //public virtual Questions QuestionAnswer { get; set; }
 
