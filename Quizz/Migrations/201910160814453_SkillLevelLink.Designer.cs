@@ -7,13 +7,13 @@ namespace Quizz.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class DbSetRedo : IMigrationMetadata
+    public sealed partial class SkillLevelLink : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(DbSetRedo));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(SkillLevelLink));
         
         string IMigrationMetadata.Id
         {
-            get { return "201909261342114_DbSetRedo"; }
+            get { return "201910160814453_SkillLevelLink"; }
         }
         
         string IMigrationMetadata.Source

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,10 @@ namespace Quizz.Entities
     {
         public QuizzContext() : base()
         {
-            
+            //modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
+            //modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+            //modelBuilder.Conventions.Remove<OneToOneConstraintIntroductionConvention>();
+            //modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
 
         public DbSet<Candidate> Candidates { get; set; }
