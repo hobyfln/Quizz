@@ -60,9 +60,17 @@
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\SkillLevel.cs" />
     <Compile Include="Entities\Technologie.cs" />
-    <Compile Include="Migrations\201909261342114_DbSetRedo.cs" />
-    <Compile Include="Migrations\201909261342114_DbSetRedo.Designer.cs">
-      <DependentUpon>201909261342114_DbSetRedo.cs</DependentUpon>
+    <Compile Include="Migrations\201910160807191_TechnoLink.cs" />
+    <Compile Include="Migrations\201910160807191_TechnoLink.Designer.cs">
+      <DependentUpon>201910160807191_TechnoLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910160814453_SkillLevelLink.cs" />
+    <Compile Include="Migrations\201910160814453_SkillLevelLink.Designer.cs">
+      <DependentUpon>201910160814453_SkillLevelLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910160825157_TechnoLink1.cs" />
+    <Compile Include="Migrations\201910160825157_TechnoLink1.Designer.cs">
+      <DependentUpon>201910160825157_TechnoLink1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,8 +81,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201909261342114_DbSetRedo.resx">
-      <DependentUpon>201909261342114_DbSetRedo.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201910160807191_TechnoLink.resx">
+      <DependentUpon>201910160807191_TechnoLink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910160814453_SkillLevelLink.resx">
+      <DependentUpon>201910160814453_SkillLevelLink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910160825157_TechnoLink1.resx">
+      <DependentUpon>201910160825157_TechnoLink1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -14,11 +14,7 @@ namespace Quizz.Entities
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int TechnologieId { get; set; }
-        [ForeignKey("CandidatQuizz")]
-        public int QuizzId { get; set; }
         public string NameTechnologie { get; set; }
-
-        public virtual Quizz CandidatQuizz { get; set; }
         #endregion;
     }
 }

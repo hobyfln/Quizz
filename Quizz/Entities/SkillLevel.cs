@@ -14,13 +14,8 @@ namespace Quizz.Entities
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int SkillLevelId { get; set; }
-        [ForeignKey("CandidatQuizz")]
-        public int QuizzId { get; set; }
         public int QuestionId { get; set; }
         public string NameSkillLevel { get; set; }
-
-        public virtual Quizz CandidatQuizz { get; set; }
-
         #endregion
 
     }
