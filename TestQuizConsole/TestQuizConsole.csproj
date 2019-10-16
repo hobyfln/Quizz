@@ -64,10 +64,6 @@
       <Project>{AA3656A7-B996-4397-8D8C-B749F2D5E29F}</Project>
       <Name>Quizz.Services</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Quizz\Quizz.Domain.csproj">
-      <Project>{CB472E92-CD2A-479D-B531-629E2D1EA8CC}</Project>
-      <Name>Quizz.Domain</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
