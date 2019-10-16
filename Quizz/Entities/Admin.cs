@@ -9,7 +9,7 @@ namespace Quizz.Entities
     class Admin : User
     {
         #region fields
-        public int IdAdmin { get; set; }
+        public int AdminId { get; set; }
         public int NameAdmin { get; set; }
         #endregion
     }
