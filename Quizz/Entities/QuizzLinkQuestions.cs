@@ -9,13 +9,15 @@ using System.Threading.Tasks;
 namespace Quizz.Entities
 {
     public partial class QuizzLinkQuestions
-    {
-        [Key, Column(Order = 0)]
+    {   
+        [Key]
+        public int LinkId { get; set; }
         [ForeignKey("Quizz")]
         public int QuizzId { get; set; }
-        [Key, Column(Order = 1)]
+        [ForeignKey("Question")]
         public int QuestionId { get; set; }
 
         public virtual Quizz Quizz { get; set; }
+        public virtual Question Question { get; set; }
     }
 }

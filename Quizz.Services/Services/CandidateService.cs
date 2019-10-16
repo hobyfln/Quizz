@@ -1,43 +1,72 @@
 ﻿using Quizz.Entities;
 using Quizz.Services.Interfaces;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Quizz
+namespace Quizz.Services.Services
 {
     public class CandidateService : ICandidateService
     {
         public void AddCandidate()
         {
+            string name = Console.ReadLine();
+            int age = Int32.Parse(Console.ReadLine());
+            string mail = Console.ReadLine();
+            int skilllevel = Int32.Parse(Console.ReadLine());
+            string techno = Console.ReadLine();
+            DateTime createdon = DateTime.Now;
+            string createdby = "Test1";
+            DateTime modifiedon = DateTime.Now;
+            string modifiedby = "Test1";
+
+
             using (var ctx = new QuizzContext())
             {
-                var candidate = new Candidate() { Name = "", Age = 20, Mail = "", SkillLevel=2, Techno="" };
+                var candidate = new Candidate() { Name = name, Age = age, Mail = mail, SkillLevel=skilllevel, Techno=techno, CreatedOn=createdon,CreatedBy=createdby,ModifiedBy=modifiedby,ModifiedOn=modifiedon };
+                ctx.Candidates.Add(candidate);
+                ctx.SaveChanges();
+
+                var query = ctx.Candidates.ToList();
+
+                //foreach(var candidates in query)
+                //{
+                //    foreach (var item in candidates) ;
+                //}
+                //Console.ReadLine();
             }
         }
 
-        public void DeleteCandidate()
+        public void DeleteCandidate(int id)
         {
-            throw new NotImplementedException();
-        }
-
-        public void EditCandidate()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void GetCandidates(List<Candidate> ListCandidates)
-        {
-            foreach (Candidate candidate in ListCandidates)
+            using (var ctx = new QuizzContext())
             {
-                Console.WriteLine("ID: " + candidate.CandidateId);
-                Console.WriteLine("Name: " + candidate.Name);
-                Console.WriteLine("Age: " + candidate.Age);
-                Console.WriteLine("Techno: " + candidate.Techno);
-                Console.WriteLine("Level: " + candidate.SkillLevel);
-                Console.WriteLine("**********");
+                var query = ctx.Candidates
+                                .Where(c => c.CandidateId == id);
+            }
+        }
+
+        public void EditCandidate(int id)
+        {
+                using (var ctx = new QuizzContext())
+            {
+                var query = ctx.Candidates
+                                .Where(c => c.CandidateId == id);
+                                
+                    
+            }
+
+        }
+
+        public List<Candidate> GetCandidates()
+        {
+            using (var ctx = new QuizzContext())
+            {
+                var candidates = ctx.Candidates;
+                return candidates.ToList();
             }
         }
     }
