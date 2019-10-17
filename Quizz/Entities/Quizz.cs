@@ -23,6 +23,8 @@ namespace Quizz
         public int TechnoId { get; set; }
         [ForeignKey("QuizzUser")]
         public int UserId { get; set; }
+        [ForeignKey ("QuizzAnswer")]
+        public int AnswerId { get; set; }
         //[ForeignKey("QuizzCreator")]
         public string CreatorId { get; set; }
         public string Creator { get; set; }
