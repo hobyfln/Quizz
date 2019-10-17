@@ -27,6 +27,5 @@ namespace Quizz.Entities
         public virtual Technologie QuestionTechnoId { get; set; }
         public virtual Answer QuestionAnswerId { get; set; }
 
-        //public List Answers<Answer> QuestionAnswers{ get; set; }
     }
 }
