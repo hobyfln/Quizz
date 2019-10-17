@@ -57,12 +57,6 @@
     <Compile Include="Services\QuizzServices.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Quizz\Quizz.Domain.csproj">
-      <Project>{cb472e92-cd2a-479d-b531-629e2d1ea8cc}</Project>
-      <Name>Quizz.Domain</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
