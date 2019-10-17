@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 namespace Quizz.Entities
 {
     public partial class QuizzLinkQuestions
-    {
+    {   
+        [Key]
+        public int LinkId { get; set; }
         [ForeignKey("Quizz")]
         public int QuizzId { get; set; }
-        [Key]
         [ForeignKey("Question")]
         public int QuestionId { get; set; }
 
