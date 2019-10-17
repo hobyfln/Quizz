@@ -17,7 +17,6 @@ namespace Quizz.Entities
 
         public int QuestionId { get; set; }
         public string NameSkillLevel { get; set; }
-
         #endregion
 
     }

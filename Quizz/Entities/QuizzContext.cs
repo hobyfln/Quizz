@@ -33,7 +33,10 @@ namespace Quizz.Entities
 
         public DbSet<Technologie> Technologies { get; set; }
         public DbSet<SkillLevel> SkillLevels { get; set; }
+        public DbSet<Answer> Answers { get; set; }
 
+        public DbSet<QuizzAnswer> QuizzAnswers { get; set; }
+        public DbSet<Result> Results { get; set; }
 
     }
 }

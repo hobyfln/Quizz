@@ -3,7 +3,7 @@ namespace Quizz.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class QuestionLinkFix4 : DbMigration
+    public partial class InitDb : DbMigration
     {
         public override void Up()
         {

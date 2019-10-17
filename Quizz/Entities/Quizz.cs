@@ -25,9 +25,14 @@ namespace Quizz
         public string CreatorId { get; set; }
         public string Creator { get; set; }
 
-        //public virtual User QuizzCreator { get; set; }
+        [ForeignKey("UserQuizzId")]
+        public int UserId { get; set; }
+
         public virtual Candidate QuizzCandidate { get; set; }
         public virtual SkillLevel QuizzSkillLevel { get; set; }
         public virtual Technologie QuizzTechno { get; set; }
+        public virtual User UserQuizzId { get; set; }
+
+        public virtual ICollection<QuizzAnswer> QuizzAnswers { get; set; }
     }
 }

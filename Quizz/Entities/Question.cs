@@ -23,8 +23,6 @@ namespace Quizz.Entities
 
         public virtual SkillLevel QuestionSkillId { get; set; }
         public virtual Technologie QuestionTechnoId { get; set; }
-
-
-        //public List Answers<Answer> QuestionAnswers{ get; set; }
+        
     }
 }

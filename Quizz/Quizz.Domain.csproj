@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -35,10 +34,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -51,20 +50,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Admin.cs" />
     <Compile Include="Entities\Answer.cs" />
     <Compile Include="Entities\BaseTable.cs" />
     <Compile Include="Entities\Candidate.cs" />
     <Compile Include="Entities\Question.cs" />
+    <Compile Include="Entities\QuizzAnswer.cs" />
     <Compile Include="Entities\QuizzContext.cs" />
     <Compile Include="Entities\QuizzLinkQuestions.cs" />
+    <Compile Include="Entities\Result.cs" />
     <Compile Include="Entities\Roles.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\SkillLevel.cs" />
     <Compile Include="Entities\Technologie.cs" />
-    <Compile Include="Migrations\201910160942581_QuestionLinkFix4.cs" />
-    <Compile Include="Migrations\201910160942581_QuestionLinkFix4.Designer.cs">
-      <DependentUpon>201910160942581_QuestionLinkFix4.cs</DependentUpon>
+    <Compile Include="Migrations\201910170728280_InitDb.cs" />
+    <Compile Include="Migrations\201910170728280_InitDb.Designer.cs">
+      <DependentUpon>201910170728280_InitDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910170813033_InitDb1.cs" />
+    <Compile Include="Migrations\201910170813033_InitDb1.Designer.cs">
+      <DependentUpon>201910170813033_InitDb1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910171031525_InitDb2.cs" />
+    <Compile Include="Migrations\201910171031525_InitDb2.Designer.cs">
+      <DependentUpon>201910171031525_InitDb2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910171217402_Result.cs" />
+    <Compile Include="Migrations\201910171217402_Result.Designer.cs">
+      <DependentUpon>201910171217402_Result.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910171231356_Test.cs" />
+    <Compile Include="Migrations\201910171231356_Test.Designer.cs">
+      <DependentUpon>201910171231356_Test.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,19 +90,22 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201910160942581_QuestionLinkFix4.resx">
-      <DependentUpon>201910160942581_QuestionLinkFix4.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201910170728280_InitDb.resx">
+      <DependentUpon>201910170728280_InitDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910170813033_InitDb1.resx">
+      <DependentUpon>201910170813033_InitDb1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910171031525_InitDb2.resx">
+      <DependentUpon>201910171031525_InitDb2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910171217402_Result.resx">
+      <DependentUpon>201910171217402_Result.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910171231356_Test.resx">
+      <DependentUpon>201910171231356_Test.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.props'))" />
-    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.targets'))" />
-  </Target>
-  <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" />
 </Project>
