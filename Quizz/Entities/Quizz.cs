@@ -22,7 +22,7 @@ namespace Quizz
         [ForeignKey("QuizzTechno")]
         public int TechnoId { get; set; }
         [ForeignKey("QuizzUser")]
-        public int  UserId { get; set; }
+        public int UserId { get; set; }
         //[ForeignKey("QuizzCreator")]
         public string CreatorId { get; set; }
         public string Creator { get; set; }
@@ -32,5 +32,7 @@ namespace Quizz
         public virtual SkillLevel QuizzSkillLevel { get; set; }
         public virtual Technologie QuizzTechno { get; set; }
         public virtual User QuizzUser { get; set; }
+        public virtual Answer QuizzAnswer { get; set; }
+
 }
 }

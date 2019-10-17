@@ -55,6 +55,7 @@
     <Compile Include="Entities\BaseTable.cs" />
     <Compile Include="Entities\Candidate.cs" />
     <Compile Include="Entities\Question.cs" />
+    <Compile Include="Entities\QuizzAnswer.cs" />
     <Compile Include="Entities\QuizzContext.cs" />
     <Compile Include="Entities\QuizzLinkQuestions.cs" />
     <Compile Include="Entities\User.cs" />
