@@ -13,6 +13,6 @@ namespace Quizz.Services.Interfaces
         void DeleteQuizz();
         void EditQuizz();
         void CloseQuizz();
-        void GetQuizzList(List<Quizz> ListQuizz);
+        void GetQuizzList(List<QuizzClass> ListQuizz);
     }
 }
