@@ -13,9 +13,11 @@ namespace Quizz.Entities
 
         #region fields
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int UserId { get; set; }
-        public int QuizzId { get; set; }
-        [ForeignKey("UserQuizz")]
+        //[ForeignKey("UserQuizzId")]
+        //public int QuizzId { get; set; }
+
         private string Email { get; set; }
         private string Passwd { get; set; }
         public bool IsAdmin { get; set; }

@@ -16,8 +16,8 @@ namespace Quizz.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int AnswerId { get; set; }
 
-        [ForeignKey("QuestionAnswer")]
-        public int QuestionId { get; set; }
+        //[ForeignKey("QuestionAnswer")]
+        //public int QuestionId { get; set; }
 
         //Réponses correctes
         public bool AnswerRight { get; set; }
@@ -31,8 +31,6 @@ namespace Quizz.Entities
         //Reponse à corriger manuellement
         public string AnswerQuestion { get; set; }
         
-
-        //public virtual Questions QuestionAnswer { get; set; }
 
         #endregion;
     }
