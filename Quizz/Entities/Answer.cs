@@ -30,6 +30,7 @@ namespace Quizz.Entities
 
         //Reponse à corriger manuellement
         public string AnswerQuestion { get; set; }
+
         
 
         #endregion;
