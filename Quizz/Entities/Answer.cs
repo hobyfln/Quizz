@@ -14,13 +14,23 @@ namespace Quizz.Entities
         //[ForeignKey("QuestionAnswer")]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int QuestionId { get; set; }
         public int AnswerId { get; set; }
-        [ForeignKey("AnswerQuizz")]
-        public bool AnswerRight { get; set; }
-        public string AnswerAbout { get; set; }
-        public string AnswerShort { get; set; }
 
+        [ForeignKey("QuestionAnswer")]
+        public int QuestionId { get; set; }
+
+        //Réponses correctes
+        public bool AnswerRight { get; set; }
+
+        //Reponses vides non repondues
+        public string AnswerVoid { get; set; }
+
+        //Commentaires sur la réponses
+        public string AnswerCom { get; set; }
+
+        //Reponse à corriger manuellement
+        public string AnswerQuestion { get; set; }
+        
 
         //public virtual Questions QuestionAnswer { get; set; }
 
