@@ -14,8 +14,10 @@ namespace Quizz.Entities
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int SkillLevelId { get; set; }
+
         public int QuestionId { get; set; }
         public string NameSkillLevel { get; set; }
+
         #endregion
 
     }

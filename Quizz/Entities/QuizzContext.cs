@@ -30,6 +30,10 @@ namespace Quizz.Entities
 
         public DbSet<QuizzLinkQuestions> QuizzLinkQuestions { get; set; }
 
+        public DbSet<Answer> Answers { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Admin> Admin { get; set; }
+
         public DbSet<Technologie> Technologies { get; set; }
         public DbSet<SkillLevel> SkillLevels { get; set; }
         public DbSet<Percent> Percents { get; set; }
