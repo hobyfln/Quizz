@@ -51,7 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Admin.cs" />
     <Compile Include="Entities\Answer.cs" />
     <Compile Include="Entities\BaseTable.cs" />
     <Compile Include="Entities\Candidate.cs" />
