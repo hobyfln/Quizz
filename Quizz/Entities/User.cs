@@ -22,7 +22,7 @@ namespace Quizz.Entities
         private string Passwd { get; set; }
         public bool IsAdmin { get; set; }
 
-        public virtual ICollection<Quizz> Quizzs { get; set; }
+        public virtual ICollection<QuizzClass> Quizzs { get; set; }
         #endregion
 
         #region login

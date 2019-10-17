@@ -16,7 +16,7 @@ namespace Quizz.Entities
         [ForeignKey("AdminUserId")]
         public string NameAdmin { get; set; }
         
-
+        public virtual
         #region method
 
         #endregion

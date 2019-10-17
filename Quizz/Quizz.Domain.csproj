@@ -61,18 +61,6 @@
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\SkillLevel.cs" />
     <Compile Include="Entities\Technologie.cs" />
-    <Compile Include="Migrations\201910160942581_QuestionLinkFix4.cs" />
-    <Compile Include="Migrations\201910160942581_QuestionLinkFix4.Designer.cs">
-      <DependentUpon>201910160942581_QuestionLinkFix4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910161022103_Pull Hoby.cs" />
-    <Compile Include="Migrations\201910161022103_Pull Hoby.Designer.cs">
-      <DependentUpon>201910161022103_Pull Hoby.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910161234584_PercentSkill.cs" />
-    <Compile Include="Migrations\201910161234584_PercentSkill.Designer.cs">
-      <DependentUpon>201910161234584_PercentSkill.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\QuizzClass.cs" />
@@ -80,17 +68,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201910160942581_QuestionLinkFix4.resx">
-      <DependentUpon>201910160942581_QuestionLinkFix4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910161022103_Pull Hoby.resx">
-      <DependentUpon>201910161022103_Pull Hoby.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910161234584_PercentSkill.resx">
-      <DependentUpon>201910161234584_PercentSkill.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
