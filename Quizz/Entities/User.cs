@@ -8,26 +8,19 @@ using System.Threading.Tasks;
 
 namespace Quizz.Entities
 {
-    public partial class User
+    public partial class User :BaseTable
     {
-
-        #region fields
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int UserId { get; set; }
-        //[ForeignKey("UserQuizzId")]
-        //public int QuizzId { get; set; }
-
+        public string FullName { get; set; }
         private string Email { get; set; }
-        private string Passwd { get; set; }
+        private string Password { get; set; }
         public bool IsAdmin { get; set; }
-
         public virtual ICollection<Quizz> Quizzs { get; set; }
-        #endregion
 
-        #region login
-        //Login
-
+        #region methode
+        
         #endregion
     }
 }

@@ -10,7 +10,8 @@ namespace Quizz.Entities
 {
     public partial class QuizzContext : DbContext
     {
-        public QuizzContext() : base()
+
+        public QuizzContext() : base("name=DbQuizz")
         {
 
         }
@@ -25,19 +26,17 @@ namespace Quizz.Entities
 
 
         public DbSet<Candidate> Candidates { get; set; }
-        public DbSet<QuizzClass> Quizzs { get; set; }
+        public DbSet<Quizz> Quizzs { get; set; }
         public DbSet<Question> Questions { get; set; }
 
         public DbSet<QuizzLinkQuestions> QuizzLinkQuestions { get; set; }
 
-        public DbSet<Answer> Answers { get; set; }
-        public DbSet<User> Users { get; set; }
-        public DbSet<Admin> Admin { get; set; }
-
         public DbSet<Technologie> Technologies { get; set; }
         public DbSet<SkillLevel> SkillLevels { get; set; }
-        public DbSet<Percent> Percents { get; set; }
+        public DbSet<Answer> Answers { get; set; }
 
+        public DbSet<QuizzAnswer> QuizzAnswers { get; set; }
+        public DbSet<Result> Results { get; set; }
 
     }
 }

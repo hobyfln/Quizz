@@ -8,29 +8,20 @@ using System.Threading.Tasks;
 
 namespace Quizz.Entities
 {
-    public partial class Answer
+    public partial class Answer : BaseTable
     {
         #region Get/Set
-        //[ForeignKey("QuestionAnswer")]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int AnswerId { get; set; }
+        [ForeignKey("AnswerQuestionId")]
+        public int QuestionId { get; set; }
+        public bool RightAnswer { get; set; }
+        public string AboutAnswer { get; set; }
 
-        //[ForeignKey("QuestionAnswer")]
-        //public int QuestionId { get; set; }
 
-        //Réponses correctes
-        public bool AnswerRight { get; set; }
-
-        //Reponses vides non repondues
-        public string AnswerVoid { get; set; }
-
-        //Commentaires sur la réponses
-        public string AnswerCom { get; set; }
-
-        //Reponse à corriger manuellement
-        public string AnswerQuestion { get; set; }
-        
+        public virtual Question AnswerQuestionId { get; set; }
+        //public virtual ICollection<QuizzAnswer> QuizzAnswers { get; set; }
 
         #endregion;
     }
