@@ -11,7 +11,7 @@ namespace Quizz.Entities
     public partial class QuizzContext : DbContext
     {
 
-        public QuizzContext() : base("name=DbQuizz")
+        public QuizzContext() : base()
         {
 
         }
@@ -26,7 +26,7 @@ namespace Quizz.Entities
 
 
         public DbSet<Candidate> Candidates { get; set; }
-        public DbSet<Quizz> Quizzs { get; set; }
+        public DbSet<QuizzClass> Quizzs { get; set; }
         public DbSet<Question> Questions { get; set; }
 
         public DbSet<QuizzLinkQuestions> QuizzLinkQuestions { get; set; }

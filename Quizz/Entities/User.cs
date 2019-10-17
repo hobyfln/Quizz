@@ -17,7 +17,7 @@ namespace Quizz.Entities
         private string Email { get; set; }
         private string Password { get; set; }
         public bool IsAdmin { get; set; }
-        public virtual ICollection<Quizz> Quizzs { get; set; }
+        public virtual ICollection<QuizzClass> Quizzs { get; set; }
 
         #region methode
         

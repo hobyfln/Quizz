@@ -7,13 +7,13 @@ namespace Quizz.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class InitDb2 : IMigrationMetadata
+    public sealed partial class INit2 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitDb2));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(INit2));
         
         string IMigrationMetadata.Id
         {
-            get { return "201910171031525_InitDb2"; }
+            get { return "201910171313093_INit2"; }
         }
         
         string IMigrationMetadata.Source

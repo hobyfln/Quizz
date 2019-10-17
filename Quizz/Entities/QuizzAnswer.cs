@@ -23,7 +23,7 @@ namespace Quizz.Entities
         //Commentaires
         public string Comments { get; set; }
 
-        public virtual Quizz Quizz { get; set; }
+        public virtual QuizzClass Quizz { get; set; }
         public virtual Answer Answer { get; set; }
         #endregion
     }

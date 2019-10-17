@@ -3,7 +3,7 @@ namespace Quizz.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class PullHoby : DbMigration
+    public partial class Init1 : DbMigration
     {
         public override void Up()
         {
