@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Quizz
 {
-    public partial class Quizz : BaseTable
+    public partial class QuizzClass : BaseTable
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

@@ -25,7 +25,7 @@ namespace Quizz.Entities
 
 
         public DbSet<Candidate> Candidates { get; set; }
-        public DbSet<Quizz> Quizzs { get; set; }
+        public DbSet<QuizzClass> Quizzs { get; set; }
         public DbSet<Question> Questions { get; set; }
 
         public DbSet<QuizzLinkQuestions> QuizzLinkQuestions { get; set; }

@@ -17,7 +17,7 @@ namespace Quizz.Entities
         [ForeignKey("Question")]
         public int QuestionId { get; set; }
 
-        public virtual Quizz Quizz { get; set; }
+        public virtual QuizzClass Quizz { get; set; }
         public virtual Question Question { get; set; }
     }
 }

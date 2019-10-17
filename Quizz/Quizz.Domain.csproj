@@ -75,7 +75,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Entities\Quizz.cs" />
+    <Compile Include="Entities\QuizzClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

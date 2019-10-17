@@ -37,9 +37,9 @@ namespace Quizz.Services.Services
         }
 
         //Retourne la liste des Quizz
-        public void GetQuizzList(List<Quizz> ListQuizz)
+        public void GetQuizzList(List<QuizzClass> ListQuizz)
         {
-            foreach (Quizz quizz in ListQuizz)
+            foreach (QuizzClass quizz in ListQuizz)
             {
                 Console.WriteLine("Candidate ID: " + quizz.CandidateId);
                 Console.WriteLine("Questions ID: " + quizz.QuestionId);
