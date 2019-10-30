@@ -1,4 +1,5 @@
-﻿using Quizz.Services.Interfaces;
+﻿using Quizz.Entities;
+using Quizz.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +11,17 @@ namespace Quizz.Services.Services
     class QuizzServices: IQuizzService
     {
         //Génération d'un Quizz
-        public void GenerateQuizz()
-        {
-            throw new NotImplementedException();
-        }
+        //public void GenerateQuizz()
+        //{
+        //    using (var ctx = new QuizzContext())
+        //    {
+        //        var quizz = new QuizzClass() {, CreatedOn = createdon, CreatedBy = createdby, ModifiedBy = modifiedby, ModifiedOn = modifiedon };
+        //        ctx.Quizzs.Add(quizz);
+        //        ctx.SaveChanges();
+
+        //        var query = ctx.Candidates.ToList();
+        //    }
+        //}
         //Sauvegarde d'un Quizz dans la Db
         public void SaveQuizz()
         {
@@ -46,6 +54,11 @@ namespace Quizz.Services.Services
                 Console.WriteLine("Quizz ID: " + quizz.QuizzId);
                 Console.WriteLine("**********");
             }
+        }
+
+        public void GenerateQuizz()
+        {
+            throw new NotImplementedException();
         }
     }
 }

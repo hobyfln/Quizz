@@ -61,12 +61,16 @@ namespace Quizz.Services.Services
 
         }
 
-        public List<Candidate> GetCandidates()
+        public void GetCandidates()
         {
             using (var ctx = new QuizzContext())
             {
                 var candidates = ctx.Candidates;
-                return candidates.ToList();
+                candidates.ToList();
+                foreach(Candidate candidate in candidates)
+                {
+                    Console.WriteLine(candidate);
+                }
             }
         }
     }
