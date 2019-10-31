@@ -44,7 +44,7 @@ namespace Quizz.Services.Services
         {
             using (var ctx = new QuizzContext())
             {
-                ctx.Candidates.Remove(ctx.Candidates.Single(c => c.CandidateId == id));
+                ctx.Candidates.Remove(ctx.Candidates.Single(c => c.QuizzCandidateId == id));
                 ctx.SaveChanges();
             }
         }
@@ -54,7 +54,7 @@ namespace Quizz.Services.Services
                 using (var ctx = new QuizzContext())
             {
                 var query = ctx.Candidates
-                                .Where(c => c.CandidateId == id);
+                                .Where(c => c.QuizzCandidateId == id);
                                 
                     
             }

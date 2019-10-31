@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Quizz.Entities
 {
-    public partial class Technologie : BaseTable
+    public partial class Technology : BaseTable
     {
         #region Getters/Setters
         [Key]

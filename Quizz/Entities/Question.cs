@@ -12,7 +12,7 @@ namespace Quizz.Entities
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int QuestionId { get; set; }
+        public int QuizzQuestionsId { get; set; }
         public string QuestionStr { get; set; }
         public string Type { get; set; }
 
@@ -22,7 +22,7 @@ namespace Quizz.Entities
         public int QuestionTechno { get; set; }
 
         public virtual SkillLevel QuestionSkillId { get; set; }
-        public virtual Technologie QuestionTechnoId { get; set; }
+        public virtual Technology QuestionTechnoId { get; set; }
         
     }
 }

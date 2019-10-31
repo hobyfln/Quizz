@@ -9,28 +9,26 @@ using System.Threading.Tasks;
 
 namespace Quizz
 {
-    public partial class QuizzClass : BaseTable
+    public partial class Quizz : BaseTable
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int QuizzId { get; set; }
-        public int QuestionId { get; set; }
+        [ForeignKey("QuizzQuestions")]
+        public int QuizzQuestionsId { get; set; }
         [ForeignKey("QuizzCandidate")]
-        public int CandidateId { get; set; }
+        public int QuizzCandidateId { get; set; }
         [ForeignKey("QuizzSkillLevel")]
-        public int SkillLevelId { get; set; }
+        public int QuizzSkillLevelId { get; set; }
         [ForeignKey("QuizzTechno")]
-        public int TechnoId { get; set; }
+        public int QuizzTechnoId { get; set; }
         [ForeignKey("QuizzUser")]
-        public int  UserId { get; set; }
-        //[ForeignKey("QuizzCreator")]
-        public string CreatorId { get; set; }
-        public string Creator { get; set; }
+        public int  QuizzUserId { get; set; }
 
-        //public virtual User QuizzCreator { get; set; }
+        public virtual QuizzLinkQuestions QuizzQuestions { get; set; }
         public virtual Candidate QuizzCandidate { get; set; }
         public virtual SkillLevel QuizzSkillLevel { get; set; }
-        public virtual Technologie QuizzTechno { get; set; }
+        public virtual Technology QuizzTechno { get; set; }
         public virtual User QuizzUser { get; set; }
 }
 }

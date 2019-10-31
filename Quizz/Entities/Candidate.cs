@@ -16,7 +16,7 @@ namespace Quizz
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int CandidateId { get; set; }
+        public int QuizzCandidateId { get; set; }
         //[ForeignKey("CandidatQuizz")]
         public int QuizzId { get; set; }
         public string Name { get; set; }
