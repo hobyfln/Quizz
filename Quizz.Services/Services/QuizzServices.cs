@@ -1,20 +1,17 @@
-﻿using Quizz.Services.Interfaces;
+﻿using Quizz.Domain.ViewModels;
+using Quizz.Entities;
+using Quizz.Repository.QuizzRepo;
+using Quizz.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Quizz.Services.Services 
+namespace Quizz.Services.Services
 {
-    class QuizzServices: IQuizzService
+    public class QuizzServices : IQuizzService
     {
-        //Génération d'un Quizz
-        public void GenerateQuizz()
-        {
-            throw new NotImplementedException();
-        }
-        //Sauvegarde d'un Quizz dans la Db
         public void SaveQuizz()
         {
             throw new NotImplementedException();
@@ -37,14 +34,37 @@ namespace Quizz.Services.Services
         }
 
         //Retourne la liste des Quizz
-        public void GetQuizzList(List<QuizzClass> ListQuizz)
+        public void GetQuizzList(List<Quizz> ListQuizz)
         {
-            foreach (QuizzClass quizz in ListQuizz)
+            foreach (Quizz quizz in ListQuizz)
             {
-                Console.WriteLine("Candidate ID: " + quizz.CandidateId);
-                Console.WriteLine("Questions ID: " + quizz.QuestionId);
+                Console.WriteLine("Candidate ID: " + quizz.QuizzCandidateId);
                 Console.WriteLine("Quizz ID: " + quizz.QuizzId);
                 Console.WriteLine("**********");
+            }
+        }
+
+        public void GenerateQuizz(QuizzAddViewModel model)
+        {
+            var quizzManager = new QuizzManager();
+            quizzManager.Create(model);
+        }
+
+        public void GetQuestions(int nbQuestions, int skillId, int technoId)
+        {
+            Random rnd = new Random();
+
+            using (var ctx = new QuizzContext())
+            {
+                List<Question> questions = ctx.Questions
+                    .Where(q => q.QuestionSkillId.SkillLevelId == skillId && q.QuestionTechnoId.TechnologieId == technoId)
+                    .ToList();
+
+                for (int i = 0; i < nbQuestions; i++)
+                {
+                    int questionSelected = rnd.Next(0, questions.Count());
+                    questions.ElementAt(questionSelected);
+                }
             }
         }
     }

@@ -12,7 +12,7 @@ namespace Quizz.Services.Interfaces
         void AddCandidate();
         void DeleteCandidate(int id);
         void EditCandidate(int id);
-        List<Candidate> GetCandidates();
+        void GetCandidates();
         
     }
 }

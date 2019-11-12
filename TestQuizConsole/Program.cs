@@ -16,7 +16,8 @@ namespace TestQuizConsole
         {
             var ServiceProvider = new CandidateService();
             //ServiceProvider.AddCandidate();
-            ServiceProvider.DeleteCandidate(1);
+            //sServiceProvider.DeleteCandidate(1);
+            ServiceProvider.GetCandidates();
         }
 
 

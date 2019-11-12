@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Quizz.Domain.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +9,11 @@ namespace Quizz.Services.Interfaces
 {
     public interface IQuizzService
     {
-        void GenerateQuizz();
+        void GenerateQuizz(QuizzAddViewModel model);
         void SaveQuizz();
         void DeleteQuizz();
         void EditQuizz();
         void CloseQuizz();
-        void GetQuizzList(List<QuizzClass> ListQuizz);
+        void GetQuizzList(List<Quizz> ListQuizz);
     }
 }
