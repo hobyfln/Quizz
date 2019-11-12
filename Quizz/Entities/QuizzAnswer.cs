@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Quiz.Entities
+namespace Quizz.Entities
 {
 
     public partial class QuizzAnswer : BaseTable
@@ -28,7 +28,7 @@ namespace Quiz.Entities
         public string Comments { get; set; }
 
         //Virtual
-        public virtual QuizzAnswer Quizzs { get; set; }
+        public virtual Quizz Quizzs { get; set; }
         public virtual Answer Answers { get; set; }
         #endregion
 

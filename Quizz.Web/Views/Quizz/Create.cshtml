@@ -1,0 +1,16 @@
+﻿@model Quizz.Domain.ViewModels.QuizzAddViewModel
+@{
+    ViewBag.Title = "Ajouter un Quizz";
+}
+
+@using (Html.BeginForm("Create", "Quizz", FormMethod.Post))
+{
+    @Html.TextBoxFor(m => m.CandidateName)
+    @Html.TextBoxFor(m => m.CandidateAge)
+    @Html.TextBoxFor(m => m.CandidateMail)
+    <input type="submit" class="btn btn-default" value="Ajouter un Quizz" />
+}
+
+
+
+
