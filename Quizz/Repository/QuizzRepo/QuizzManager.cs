@@ -24,6 +24,7 @@ namespace Quizz.Repository.QuizzRepo
                     ModifiedOn = model.ModifiedOn,
 
                     QuizzQuestions = model.QuizzQuestions,
+
                     QuizzCandidate = new Candidate()
                     {
                         Name = model.CandidateName,

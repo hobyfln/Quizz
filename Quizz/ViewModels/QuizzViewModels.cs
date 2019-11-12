@@ -16,9 +16,10 @@ namespace Quizz.Domain.ViewModels
         public DateTime ModifiedOn = DateTime.Now;
 
         //TO-DO Select question Method
+
         public QuizzLinkQuestions QuizzQuestions = new QuizzLinkQuestions()
         {
-            Question = new Question()
+            
         };
 
         public string CandidateName { get; set; }
