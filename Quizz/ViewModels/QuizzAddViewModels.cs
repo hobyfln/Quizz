@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Quizz.ViewModels
+namespace Quizz.Domain.ViewModels
 {
-    public class QuizzAddViewModels
+    public class QuizzAddViewModel
     {
         public string CreatedBy { get; set; }
         public DateTime CreatedOn = DateTime.Now;
