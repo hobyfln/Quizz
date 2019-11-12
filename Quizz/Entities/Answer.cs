@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Quizz.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -6,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Quizz.Entities
+namespace Quizz.Domain.Entities
 {
     public partial class Answer : BaseTable
     {
@@ -15,7 +16,7 @@ namespace Quizz.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int AnswerId { get; set; }
         [ForeignKey("AnswerQuestionId")]
-        public int QuestionId { get; set; }
+        public int QuizzQuestionsId { get; set; }
         public bool RightAnswer { get; set; }
         public string AboutAnswer { get; set; }
 

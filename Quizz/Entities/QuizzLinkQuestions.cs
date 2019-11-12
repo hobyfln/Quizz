@@ -11,13 +11,13 @@ namespace Quizz.Entities
     public partial class QuizzLinkQuestions
     {   
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int LinkId { get; set; }
-        [ForeignKey("Quizz")]
+        //[ForeignKey("Quizz")]
         public int QuizzId { get; set; }
         [ForeignKey("Question")]
-        public int QuestionId { get; set; }
+        public int QuizzQuestionId { get; set; }
 
-        public virtual QuizzClass Quizz { get; set; }
         public virtual Question Question { get; set; }
     }
 }

@@ -22,7 +22,7 @@ namespace Quizz.Entities
         public int QuestionTechno { get; set; }
 
         public virtual SkillLevel QuestionSkillId { get; set; }
-        public virtual Technologie QuestionTechnoId { get; set; }
+        public virtual Technology QuestionTechnoId { get; set; }
         
     }
 }
