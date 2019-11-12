@@ -2,7 +2,6 @@
 using Quizz.Entities;
 using Quizz.Repository.QuizzRepo;
 using Quizz.Services.Interfaces;
-using Quizz.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,19 +12,6 @@ namespace Quizz.Services.Services
 {
     public class QuizzServices : IQuizzService
     {
-        //Génération d'un Quizz
-        //public void GenerateQuizz()
-        //{
-        //    using (var ctx = new QuizzContext())
-        //    {
-        //        var quizz = new Quizz() {, CreatedOn = createdon, CreatedBy = createdby, ModifiedBy = modifiedby, ModifiedOn = modifiedon };
-        //        ctx.Quizzs.Add(quizz);
-        //        ctx.SaveChanges();
-
-        //        var query = ctx.Candidates.ToList();
-        //    }
-        //}
-        //Sauvegarde d'un Quizz dans la Db
         public void SaveQuizz()
         {
             throw new NotImplementedException();
@@ -58,12 +44,28 @@ namespace Quizz.Services.Services
             }
         }
 
-        public void GenerateQuizz(QuizzAddViewModels model)
+        public void GenerateQuizz(QuizzAddViewModel model)
         {
             var quizzManager = new QuizzManager();
             quizzManager.Create(model);
         }
-        
-    }
 
+        public void GetQuestions(int nbQuestions, int skillId, int technoId)
+        {
+            Random rnd = new Random();
+
+            using (var ctx = new QuizzContext())
+            {
+                List<Question> questions = ctx.Questions
+                    .Where(q => q.QuestionSkillId.SkillLevelId == skillId && q.QuestionTechnoId.TechnologieId == technoId)
+                    .ToList();
+
+                for (int i = 0; i < nbQuestions; i++)
+                {
+                    int questionSelected = rnd.Next(0, questions.Count());
+                    questions.ElementAt(questionSelected);
+                }
+            }
+        }
+    }
 }

@@ -13,10 +13,9 @@ namespace Quizz.Entities
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int LinkId { get; set; }
-        //[ForeignKey("Quizz")]
         public int QuizzId { get; set; }
         [ForeignKey("Question")]
-        public int QuizzQuestionId { get; set; }
+        public int QuizzQuestionsId { get; set; }
 
         public virtual Question Question { get; set; }
     }

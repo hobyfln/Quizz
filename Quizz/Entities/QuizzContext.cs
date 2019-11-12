@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
-using Quizz.Domain.Entities;
 using Quizz.Domain.ViewModels;
 using System;
 using System.Collections.Generic;

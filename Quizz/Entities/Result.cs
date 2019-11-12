@@ -18,7 +18,7 @@ namespace Quizz.Entities
         public bool Answered { get; set; }
         public bool IsCorrect { get; set; }
         public bool IsOpen { get; set; }
-
+        
 
 
     }

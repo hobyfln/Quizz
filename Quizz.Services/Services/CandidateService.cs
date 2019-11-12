@@ -26,7 +26,7 @@ namespace Quizz.Services.Services
 
             using (var ctx = new QuizzContext())
             {
-                var candidate = new Candidate() { Name = name, Age = age, Mail = mail, SkillLevel = skilllevel, Techno = techno, CreatedOn = createdon, CreatedBy = createdby, ModifiedBy = modifiedby, ModifiedOn = modifiedon };
+                var candidate = new Candidate() { Name = name, Age = age, Mail = mail, SkillLevel=skilllevel, Techno=techno, CreatedOn=createdon,CreatedBy=createdby,ModifiedBy=modifiedby,ModifiedOn=modifiedon };
                 ctx.Candidates.Add(candidate);
                 ctx.SaveChanges();
 
@@ -51,12 +51,12 @@ namespace Quizz.Services.Services
 
         public void EditCandidate(int id)
         {
-            using (var ctx = new QuizzContext())
+                using (var ctx = new QuizzContext())
             {
                 var query = ctx.Candidates
                                 .Where(c => c.QuizzCandidateId == id);
-
-
+                                
+                    
             }
 
         }
@@ -67,7 +67,7 @@ namespace Quizz.Services.Services
             {
                 var candidates = ctx.Candidates;
                 candidates.ToList();
-                foreach (Candidate candidate in candidates)
+                foreach(Candidate candidate in candidates)
                 {
                     Console.WriteLine(candidate);
                 }

@@ -1,16 +1,16 @@
-﻿using Quizz.Entities;
-using Quizz.ViewModels;
+﻿using Quizz.Domain.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Quizz.Entities;
 
 namespace Quizz.Repository.QuizzRepo
 {
     public class QuizzManager
     {
-        public void Create(QuizzAddViewModels model)
+        public void Create(QuizzAddViewModel model)
         {
             using (var ctx = new QuizzContext())
             {
@@ -24,6 +24,7 @@ namespace Quizz.Repository.QuizzRepo
                     ModifiedOn = model.ModifiedOn,
 
                     QuizzQuestions = model.QuizzQuestions,
+
                     QuizzCandidate = new Candidate()
                     {
                         Name = model.CandidateName,
